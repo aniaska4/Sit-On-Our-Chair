@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="pl">
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="warsztat" content="Rozwiązujemy zadania z głową">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Zadania z CSS i HTML - Coders Lab</title>
+    <script src="app.js"></script>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+    <style>
+        @import url('https://fonts.googleapis.com/css?family=Raleway:400,700,900&subset=latin-ext');
+    </style>
+</head>
+
+<body>
+    <header>
+        <!--pierwsza sekcja menu-->
+        <nav class="container nav">
+            <div class="logo">
+                <p class="text">sit <span class="on">on</span> chair</p>
+            </div>
+
+            <ol class="main_nav">
+                <li class="nav_item">
+                    <a href="#">O firmie</a>
+
+                    <!--droopdown-->
+                    <ul class="droopdown">
+                        <li><a class="droopdown_list" href="#">Aktualności</a></li>
+                        <li><a class="droopdown_list" href="#">Nasz team</a></li>
+                        <li><a class="droopdown_list" href="#">Historia</a></li>
+                    </ul>
+
+                </li>
+                <li class="nav_item">
+                    <a href="#">Galeria</a>
+                </li>
+                <li class="nav_item">
+                    <a href="#">Kontakt</a>
+                </li>
+            </ol>
+
+        </nav>
+    </header>
+    <!--druga sekcja slaider-->
+    <section class="container ">
+        <section class="slider row two">
+            <button class="btn-left">< <a href=""></a></button> 
+            <!--tekst, guzik intro, zdjęcie-->
+            <ul class="picture_all slider-slide">
+                    <li class="slider-slide active chair_black">
+                        <img class="slider__image" src="images/black_chair.png" alt="">
+                    </li>
+                    <li class="slider-slide chair_red">
+                        <img class="slider__image" src="images/orange_chair.png" alt="">
+                    </li>
+                    <li class="slider-slide chair_orange">
+                        <img class="slider__image" src="images/red_chair.png" alt="">
+                    </li>
+                </ul>
+           
+            <div class="text2">
+                <h1 class="title">sit <span class="on2">on </span>our <span class="chair">chair</span>
+                </h1>
+                <p class="loremIpsum">
+                    Lorem ipsum dolor sit amet enim. Etiam ullamcorper. <br>
+                    Suspendisse a pellentesque dui, non felis. Maecenas <br>
+                    malesuada elit lectus felis, malesuada ultricies.<br>
+                    Corporis, tempora esse?
+                </p>
+
+                <p class="button-intro">
+                    <a href="#" class="more">Zobacz więcej</a>
+                </p>
+            </div>
+                       
+            <button class="btn-right">><a href=""></a></button>
+        </section>
+    </section>
+
+
+    <!--trzecia sekcja oferta-->
+    <section>
+        <div class="container row gallery">
+            <!--pierwszy obrazek-->
+            <article class="img1 imgAll">
+                <div class="title">
+                    <h2 class="title_next"> Chair <span class="upper">Cler</span>
+                    </h2>
+                </div>
+            </article>
+            <!--drugi obrazek-->
+            <article class="img2 imgAll">
+                <div class="title">
+                    <h2 class="title_next"> Chair <span class="upper">Margarita</span></h2>
+                </div>
+            </article>
+            <!--trzeci obrazek-->
+            <article class="img3 ">
+                <div class="title">
+                    <h2 class="title_prev">Finds all inputs</h2>
+                </div>
+                <div class="title">
+                    <h2 class="title_slide">Lorem ipsum dolor sit amet,
+                        consectetur adipisicing elit.
+                        Fugiat, cumque? Lorem ipsum dolor sit amet,
+                        consectetur adipisicing elit.
+                        Fugiat, cumque? Maecenas
+                        malesuada elit lectus felis, malesuada ultricies. Corporis, tempora ess
+                    </h2>
+                </div>
+            </article>
+        </div>
+    </section>
+
+
+    <!--czwarta sekcja cennik-->
+    <section class="container">
+        <div class="price">
+            <div class="title_price">
+                <h2 class="price_tabel"> Cennik
+                </h2>
+            </div>
+        </div>
+        <!--pierwszy prostokąt cennik-->
+        <div class="articles_list_price row price2">
+            <article class="plan_offer offer_A">
+                <h2 class="typeA">Basic plan</h2>
+                <div class="circle__A">
+                    <div class="circleA">
+                        <p class="priceA">85 <sup>99</sup></p>
+                        <p class="priceAa">PLN/MSC</p>
+                    </div>
+                </div>
+                <div class="description">
+                    <div class="infoA">Zakup towaru + dowóz</div>
+                    <div class="serwisA">Serwis</div>
+                    <div class="box_buttonA">
+                        <a class="button btnA" href="button">Dołącz</a>
+                    </div>
+                </div>
+            </article>
+
+            <article class="plan_offer offer_B">
+                <h2 class="typeB">Standard plan</h2>
+                <div class="circle__B">
+                    <div class="circleB">
+                        <p class="priceB">95 <sup>99</sup></p>
+                        <p class="priceBb">PLN/MSC</p>
+                    </div>
+                </div>
+                <div class="description">
+                    <div class="infoB">Zakup towaru + dowóz</div>
+                    <div class="serwisB">Serwis</div>
+                    <div class="warrantyB">Gwarancja 5 lat</div>
+                    <div class="box_buttonB">
+                        <a class="button btnB" href="button">Dołącz</a>
+                    </div>
+                </div>
+            </article>
+
+            <article class="plan_offer">
+                <h2 class="typeC">Advance plan</h2>
+                <div class="circle__C">
+                    <div class="circleC">
+                        <p class="priceC">211<sup>00</sup></p>
+                        <p class="priceCc">PLN/MSC</p>
+                    </div>
+                </div>
+                <div class="description">
+                    <div class="infoC">Zakup towaru + dowóz</div>
+                    <div class="serwisC">Serwis</div>
+                    <div class="warranyC">Gwarancja 5 lat</div>
+                    <div class="adviceC">Porady projektanta</div>
+                    <div class="box_buttonC">
+                        <a class="button btnC" href="button">Dołącz</a>
+                    </div>
+                </div>
+            </article>
+        </div>
+    </section>
+
+    <!--piąta sekcja formularz-->
+
+    <section>
+        <div class="container contact_all">
+            <section class="contact_box">
+                <div class="contact">
+                    <h2 class="contact_name"> Kontakt
+                    </h2>
+                </div>
+
+                <div class="form_all">
+                    <div class='form-group'>
+                        <input type="text" class='form_name form' id='name' placeholder="Imię">
+                    </div>
+                    <div class='form-group'>
+                        <input type="email" class='form_email form' id='email' placeholder="e-mail:">
+                    </div>
+                    <div class='form-group'>
+                        <input type="text" class='form_message form' id='message' placeholder="Wiadomość:">
+                    </div>
+                </div>
+            </section>
+
+            <section class="checkbox_box">
+                <div class="img_chair">
+                </div>
+
+                <div class="checkbox">
+                    <label class="agreement_checked">
+                        <input type="checkbox" name="agree" class="checked">
+                        <span class="checkmark"></span>
+                    </label>
+                    <p>Zgadzam się na przetwarzanie<br>
+                        danych osobowych</p>
+                </div>
+                <div class="button_check">
+                    <a class="button_name" href="button">Wyślij</a>
+                </div>
+            </section>
+        </div>
+    </section>
+
+
+    <!--szósta sekcja footer-->
+
+
+    <section class="footer container">
+        <footer class="footer_box1">
+            <div class="footer__copyright">
+                <p class="footer__copyright__reserved">Copyright 2018 | All rights reserved - Sit On Chair</p>
+            </div>
+        </footer>
+
+        <footer class="footer_box2">
+            <div class="footer__icon">
+                <a href="#" class="social__link">
+                    <img src="images/flickr.png" alt="Flickr" class="social__image">
+                    <img src="images/vimeo.png" alt="Flickr" class="social__image">
+                    <img src="images/pinterest.png" alt="Flickr" class="social__image">
+                    <img src="images/twitter.png" alt="twitter" class="social__image">
+                </a>
+            </div>
+            <div class="footer__logo">
+                <p>sit <span class="footer__ON">on </span>chair</p>
+            </div>
+        </footer>
+    </section>
+
+</body>
+
+</html>
