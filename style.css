@@ -37,6 +37,10 @@ header{
     display:flex;
     height: auto;
     justify-content: center;
+    letter-spacing: 0.4px;
+    font-size:14px;
+    display: flex;
+    justify-content: space-between;
 }
 
 a{
@@ -45,10 +49,7 @@ a{
     text-transform: uppercase;
 }
 
-.on{
-    color: #1bba93;
-    text-transform: uppercase;
-}
+
 
 .nav{
     display: flex;
@@ -62,7 +63,14 @@ a{
 .text{
     text-transform: uppercase;
     font-size: 14px;
-    margin-left: 60px;    
+    margin-left: 60px;  
+    color: white;
+ }
+
+.letter_on{
+    color: #1bba93;
+    text-transform: uppercase;
+    font-weight: 800;
 }
 
 .droopdown{
@@ -76,7 +84,7 @@ a{
     left: calc(50% - 160px); /*bo szerokośc nav ma 303px*/      
 }
 
-.droopdown::before{
+.droopdown::before{ /*trójkąt w menu rozwijanym*/
     content:"";
     width: 0;
 	height: 0;
@@ -89,20 +97,16 @@ a{
     left: calc(50% - 10px);
 }
 
-.nav_item:hover > .droopdown {
+/* .nav_item:hover > .droopdown {
     display:block;
-  }
-/* ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^Drugi pojemnik*/
+  } */
 
-section{
-background-color:white;
-}
 
-.two{
-    display: flex;
-    justify-content: space-around;
-    height: 500px;
-    align-items: center;
+
+/* -----------------------------------------Drugi pojemnik--------------------------------------------------*/
+
+
+.slider_background{
     background: rgba(255,255,255,1);
     background: -moz-linear-gradient(top, rgba(255,255,255,1) 0%, rgba(246,246,246,1) 47%, rgba(237,237,237,1) 100%);
     background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(255,255,255,1)), color-stop(47%, rgba(246,246,246,1)), color-stop(100%, rgba(237,237,237,1)));
@@ -113,14 +117,11 @@ background-color:white;
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#ededed', GradientType=0 );
 }
 
-.chair_black,
-.chair_red,
-.chair_orange{
-    background-position: center;
-    background-size: cover;
-    width: 400px;
-    height: 400px;  
-    flex-basis: 30%;     
+.two_section{
+    display: flex;
+    justify-content: space-around;
+    height: 500px;
+    align-items: center;    
 }
 
 
@@ -134,7 +135,7 @@ p{
     text-align: center;   
 }
 
-.on2{
+.letter_on2{
     color: #1bba93;
     text-transform: uppercase;   
 }
@@ -144,7 +145,7 @@ p{
     margin-top: 30px;
 } 
 
-.title{
+.title_main{
     margin-bottom: 40px;
 }
 
@@ -180,9 +181,37 @@ p{
     margin-left: 30px;/* czy nie mozna tego inaczej wycentrować? Mam u rodzica display f*/
 }
 
+
+/* ----SLIDER------ */
+.slider-slides {
+    position: relative;
+    width: 300px;
+    list-style: none;
+    top:-180px;
+    left:-100px;
+}
+
+.slider-slide img{
+    background-size: cover;
+    background-position: center;
+}
+
 .slider-slide{
-    /* position: absolute; */
+    position: absolute;    
     opacity: 0;
+}
+
+.chair_black,
+.chair_red{
+    width: 500px;      
+}
+
+.chair_orange{
+    width: 400px;   
+}
+
+.slider-slide img {
+    width:100%;
 }
 
 .active {
@@ -190,7 +219,7 @@ p{
 }
 
 .btn-left{
-    color:#27c7ab;
+    color:#1bba93;
     font-size: 60px;
     background: none;
     border: none;
@@ -200,7 +229,7 @@ p{
 } 
 
 .btn-right{    
-    color: #27c7ab;
+    color: #1bba93;
     font-size: 60px;    
     right: 20px;
     background: none;
@@ -208,17 +237,26 @@ p{
     cursor: pointer;
     left: auto;
 }
-/*^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^TRZECIA SEKCJA*/
+
+
+/*^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^TRZECIA SEKCJA----------------------------------------------------*/
+
+
 .gallery{
     padding-top: 20px;
+    height: 320px;
+    display:flex;
+    justify-content: space-between;    
 }
+
 
 .imgAll{
     width: 330px;
-    height: 200px;
+    height: 230px;
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+    margin:10px;
 }
 .img1{
     background-image: url('./images/box1_img.jpg');
@@ -231,7 +269,7 @@ p{
 .img3{
     background-color: white;
     width: 330px;
-    height: 200px;
+    height: 250px;
     border: 1px solid lightgray;
 }
 .upper{
@@ -240,7 +278,13 @@ p{
 
 .title{
    background-color: rgba(255, 255, 255, 0.4);
-   height: 40px;   
+   height: 40px;
+   position: relative;   
+}
+ 
+.imgAll:hover .title{ /* przy hoverze w css - zrobione w js*/
+    /* display:none;  */
+    /* transition-duration: 4s;  */
 }
 
 .title_next{
@@ -265,13 +309,19 @@ p{
     margin-left:10px;
     margin-right: 10px;   
     color: lightslategray; 
+    line-height: 2.5;
 }
  
-  /*^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^czwarty pojemnik CENNIK*/
+  /*--------------------------------czwarta sekcja CENNIK---------------------------------------------*/
+
+  .image_background{
+    background-color: rgba(240, 230, 230, 0.897);
+}
+
 
   .articles_list_price{
-      display: flex;
-      justify-content: space-around;
+    display: flex;
+    justify-content: space-around;
 }
 
   .plan_offer::before {
@@ -296,19 +346,18 @@ p{
     position: absolute;
     top: 24px;
 }
+
 .price{
-    background-color: rgba(240, 230, 230, 0.897);
+    
     height: 100px;
   }
 
 .price2{
     height: 600px;
-    background-color: rgba(240, 230, 230, 0.897);
     position: relative;
 }
 
 .title_price{
-    background-color: rgba(240, 230, 230, 0.897);
     margin-top: 30px;
     padding-top: 30px;
     border-bottom: 5px solid #1bba93;
@@ -340,7 +389,7 @@ p{
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    /*align-items: flex-end;  */    
+    height: 270px;        
 }
 
 /*pasek informacyjny A*/
@@ -368,8 +417,8 @@ p{
 }
 
 .circleA{
-    height: 125px;
-    width: 125px;
+    height: 140px;
+    width: 140px;
     border: 1px solid rgba(126, 123, 123, 0.5);
     position: absolute;
     border-radius: 50%
@@ -393,12 +442,13 @@ p{
     font-weight: 500;
     font-size: 15px;
     color: rgb(143, 140, 140);
+    text-align: center;
 }
 
 
 .infoA{
     height: 35px;
-    width: 320px;
+    width: 325px;
     background-color: rgb(230, 225, 225);
     font-size: 20px;
     text-align: center;
@@ -410,7 +460,7 @@ p{
 
 .serwisA{
     height: 35px;
-    width: 320px;
+    width: 325px;
     background-color: rgb(246, 240, 240);
     font-size: 20px;
     text-align: center;
@@ -445,10 +495,10 @@ p{
     top: 24px;
 }
 .plan_offer:hover{
-    background-color: #00c4a2;
+    background-color: #1bba93;
     width: 330px;
     height: 500px;
-    border: 1px solid #00c4a2;
+    border: 1px solid #1bba93;
     display: flex;
     flex-direction: column;
     align-items: center; 
@@ -519,8 +569,8 @@ p{
 }
 
 .circleB{
-    height: 125px;
-    width: 125px;
+    height: 140px;
+    width: 140px;
     border: 1px solid rgba(126, 123, 123, 0.5);
     position: absolute;
     border-radius: 50%
@@ -544,12 +594,13 @@ p{
     font-weight: 500;
     font-size: 15px;
     color: rgb(143, 140, 140);
+    text-align: center;
 }
 
 
 .infoB{
     height: 35px;
-    width: 320px;
+    width: 325px;
     background-color: rgb(230, 225, 225);
     font-size: 20px;
     text-align: center;
@@ -561,7 +612,7 @@ p{
 
 .serwisB{
     height: 35px;
-    width: 320px;
+    width: 325px;
     background-color: rgb(230, 225, 225);
     font-size: 20px;
     text-align: center;
@@ -571,7 +622,7 @@ p{
 
 .serwisB{
     height: 35px;
-    width: 320px;
+    width: 325px;
     background-color: rgb(246, 240, 240);
     font-size: 20px;
     text-align: center;
@@ -583,7 +634,7 @@ p{
 
 .warrantyB{
     height: 35px;
-    width: 320px;
+    width: 325px;
     background-color: white;
     font-size: 20px;
     text-align: center;
@@ -596,10 +647,10 @@ p{
 /*lista B hover*/
 
 .plan_offer:hover{
-    background-color: #00c4a2;
+    background-color: #1bba93;
     width: 330px;
     height: 500px;
-    border: 1px solid #00c4a2;
+    border: 1px solid #1bba93;
     display: flex;
     flex-direction: column;
     align-items: center; 
@@ -614,11 +665,11 @@ p{
 }
 
 .plan_offer:hover .priceBb{
-    color: #00c4a2;
+    color: #1bba93;
 }
 
 .plan_offer:hover .priceB{
-    color: #00c4a2;
+    color: #1bba93;
 }
 
 
@@ -629,7 +680,7 @@ p{
     border-radius: 10px;    
     text-decoration: none;
     text-align: center;
-    color: #00c4a2;
+    color: #1bba93;
     text-transform: uppercase;
     font-size: 1.1rem;
 }
@@ -658,8 +709,8 @@ p{
 }
 
 .circleC{
-    height: 125px;
-    width: 125px;
+    height: 140px;
+    width: 140px;
     border: 1px solid rgba(126, 123, 123, 0.5);
     position: absolute;
     border-radius: 50%
@@ -683,12 +734,13 @@ p{
     font-weight: 500;
     font-size: 15px;
     color: rgb(143, 140, 140);
+    text-align: center;
 }
 
 
 .infoC{
     height: 35px;
-    width: 320px;
+    width: 325px;
     background-color: rgb(230, 225, 225);
     font-size: 20px;
     text-align: center;
@@ -700,7 +752,7 @@ p{
 
 .serwisC{
     height: 35px;
-    width: 320px;
+    width: 325px;
     background-color: rgb(246, 240, 240);
     font-size: 20px;
     text-align: center;
@@ -712,7 +764,7 @@ p{
 
 .warranyC{
     height: 35px;
-    width: 320px;
+    width: 325px;
     background-color: white;
     font-size: 20px;
     text-align: center;
@@ -724,7 +776,7 @@ p{
 
 .adviceC{
     height: 35px;
-    width: 320px;
+    width: 325px;
     background-color: rgb(230, 225, 225);
     font-size: 20px;
     text-align: center;
@@ -737,10 +789,10 @@ p{
 /*lista C hover*/
 
 .plan_offer:hover{
-    background-color: #00c4a2;
+    background-color: #1bba93;
     width: 330px;
     height: 500px;
-    border: 1px solid #00c4a2;
+    border: 1px solid #1bba93;
     display: flex;
     flex-direction: column;
     align-items: center; 
@@ -755,11 +807,11 @@ p{
 }
 
 .plan_offer:hover .priceCc{
-    color: #00c4a2;
+    color: #1bba93;
 }
 
 .plan_offer:hover .priceC{
-    color: #00c4a2;
+    color: #1bba93;
 }
 
 
@@ -770,7 +822,7 @@ p{
     border-radius: 10px;    
     text-decoration: none;
     text-align: center;
-    color: #00c4a2;
+    color: #1bba93;
     text-transform: uppercase;
     font-size: 1.1rem;
 }
@@ -798,8 +850,8 @@ p{
 .btnA{
     margin-top: auto;
     padding: 5px;
-    margin-bottom: 20px;
-    background-color: #00c4a2;
+    
+    background-color: #1bba93;
     border-radius: 10px;    
     text-decoration: none;
     text-align: center;
@@ -820,7 +872,7 @@ p{
     margin-top: auto;
     padding: 5px;
     margin-bottom: 20px;
-    background-color: #00c4a2;
+    background-color: #1bba93;
     border-radius: 10px;    
     text-decoration: none;
     text-align: center;
@@ -840,7 +892,7 @@ p{
     margin-top: auto;
     padding: 5px;
     margin-bottom: 20px;
-    background-color: #00c4a2;
+    background-color: #1bba93;
     border-radius: 10px;
     text-decoration: none;
     text-align: center;
